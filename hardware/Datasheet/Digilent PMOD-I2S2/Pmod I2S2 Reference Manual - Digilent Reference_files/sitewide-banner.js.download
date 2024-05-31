@@ -1,0 +1,73 @@
+window.addEventListener("load", function(){
+    let slot = document.getElementById('sitewide-banner-slot');
+    if (slot) {
+        let todaysDate = new Date();
+        //define date range for promotion
+        let startDate = "04/01/2024";
+        let endDate = "04/30/2024";
+        startDate = new Date(startDate);
+        endDate = new Date(endDate);
+
+        let mon = new Date("11/29/2021");
+        let tues = new Date("11/30/2021");
+        let wed = new Date("12/1/2021");
+        let thurs = new Date("12/2/2021");
+        let fri = new Date("12/3/2021");
+
+        let settings = {};
+
+        if (todaysDate.setHours(0,0,0,0) == mon.setHours(0,0,0,0)) {
+            // Monday
+            settings["href"] = "https://digilent.com/shop/bundles-and-specials/cyber-week-deals-monday/";
+            settings["message"] = "<strong>Cyber Week is here!</strong> Shop our special daily deals now <i class=\"fas fa-angle-double-right\"><\/i>";
+
+        } else if(todaysDate.setHours(0,0,0,0) == tues.setHours(0,0,0,0)) {
+            // Tuesday
+            settings["href"] = "https://digilent.com/shop/bundles-and-specials/cyber-week-deals-tuesday/";
+            settings["message"] = "<strong>Cyber Week is here!</strong> Shop our special daily deals now <i class=\"fas fa-angle-double-right\"><\/i>";
+
+        } else if(todaysDate.setHours(0,0,0,0) == wed.setHours(0,0,0,0)) {
+            // Wednesday
+            settings["href"] = "https://digilent.com/shop/bundles-and-specials/cyber-week-deals-wednesday/";
+            settings["message"] = "<strong>Cyber Week is here!</strong> Shop our special daily deals now <i class=\"fas fa-angle-double-right\"><\/i>";
+
+        } else if(todaysDate.setHours(0,0,0,0) == thurs.setHours(0,0,0,0)) {
+            // Thursday
+            settings["href"] = "https://digilent.com/shop/bundles-and-specials/cyber-week-deals-thursday/";
+            settings["message"] = "<strong>Cyber Week is here!</strong> Shop our special daily deals now <i class=\"fas fa-angle-double-right\"><\/i>";
+
+        } else if(todaysDate.setHours(0,0,0,0) == fri.setHours(0,0,0,0)) {
+            // Friday
+            settings["href"] = "https://digilent.com/shop/bundles-and-specials/cyber-week-deals-friday/";
+            settings["message"] = "<strong>Cyber Week is here!</strong> Shop our special daily deals now <i class=\"fas fa-angle-double-right\"><\/i>";
+
+            //add check to see if we are still running Intl' Free shipping promotion
+        } else if(todaysDate.getTime() >= startDate.getTime() && todaysDate.getTime() <= endDate.getTime()) {
+            settings["message"] = "<strong>FREE</strong> US shipping on orders $35+ & <strong>FREE</strong> Int'l Shipping on orders $100+ * <i class=\"fas fa-angle-double-right\"><\/i>";
+            settings["href"] = "https://digilent.com/shop/promotions/";
+        } else {
+            settings["message"] = "<strong>FREE</strong> US shipping on orders $35+ <i class=\"fas fa-angle-double-right\"><\/i>";
+            settings["href"] = "";
+        }
+
+
+        let a = document.createElement("a");
+        a.href = settings.href;
+        a.target = "_blank";
+        a.className = "sitewide-banner";
+        a.style.backgroundColor = settings.background;
+
+        let container = document.createElement("div");
+        container.className = "container";
+
+        let wrapper = document.createElement("div");
+        wrapper.className = "banner-text";
+
+
+        wrapper.innerHTML = settings.message
+        container.appendChild(wrapper);
+        a.appendChild(container);
+        slot.appendChild(a);
+    }
+});
+

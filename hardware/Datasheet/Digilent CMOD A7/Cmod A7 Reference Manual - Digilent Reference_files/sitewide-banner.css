@@ -1,0 +1,35 @@
+.sitewide-banner {
+    background-color: #9caeac;
+    color: white !important;
+    overflow: auto;
+    font-size: 15px !important;
+    -webkit-box-shadow: 0 8px 6px -9px #999;
+    -moz-box-shadow: 0 8px 6px -9px #999;
+    box-shadow: 0 8px 6px -9px #999;
+    display: block;
+    text-decoration: none;
+}
+
+.sitewide-banner:hover,
+.sitewide-banner:focus {
+    color: white;
+}
+
+.sitewide-banner .container {
+    margin: 6px auto;
+}
+
+.sitewide-banner .banner-text {
+    text-align: center;
+}
+
+.sitewide-banner a {
+    padding: 0.42857rem 0 0.42857rem 2.28571rem;
+    color: inherit;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.sitewide-banner a:hover {
+    text-decoration: underline;
+}

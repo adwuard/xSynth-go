@@ -1,0 +1,298 @@
+/**
+ * This file provides the styles for printing.
+ *
+ * TODO: improve and finish
+ */
+
+body {
+  font-family: Garamond, Baskerville, "Hoefler Text", "Nimbus Roman No9 L", serif;
+  font-size: 11pt;
+  line-height: 13pt;
+  color: #000;
+  background-color: #fff;
+}
+
+/* hide certain sections */
+audio,
+video,
+#dokuwiki__header .tools,
+#dokuwiki__aside,
+#dokuwiki__pagetools, #dokuwiki_pagetools,
+.skip-to-content {
+  display: none;
+  width: 0;
+  max-width: 0;
+}
+
+* {
+  border-width: 0;
+}
+
+.navbar.navbar-fixed-top {
+  position: static;
+}
+.navbar .navbar-inner {
+  height: auto;
+  min-height: auto;
+  background-color: #fff;
+  background-image: none;
+  filter: none;
+  border: none;
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+}
+.navbar .container-fluid * {
+  display: none;
+}
+.navbar a.brand {
+  display: block;
+  padding: 0;
+  margin: 0;
+  margin-bottom: -30px;
+  font-size: 150%;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  border: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+caption,
+legend {
+  margin: 10px 0 10px;
+  clear: both;
+
+  page-break-before: auto;
+  page-break-inside: avoid;
+  page-break-after: avoid;
+}
+p, table, pre, ul, ol {
+  margin: 0 0 10px;
+}
+
+/*ul {
+    list-style: disc outside;
+}
+ol {
+    list-style: decimal outside;
+}
+ol ol {
+    list-style-type: lower-alpha;
+}
+ol ol ol {
+    list-style-type: upper-roman;
+}
+ol ol ol ol {
+    list-style-type: upper-alpha;
+}
+ol ol ol ol ol {
+    list-style-type: lower-roman;
+}*/
+
+/* undo icons */
+a:link,
+a:visited {
+  padding: 0;
+  color: #333;
+  text-decoration: none;
+  background-color: inherit;
+  background-image: none;
+  border-bottom: 1pt dotted;
+}
+
+/* display href after link */
+a:after {
+  font-size: 90%;
+  content: " [" attr(href) "]";
+}
+a.brand:after,
+a.btn:after {
+  display: none;
+  content: "";
+}
+
+/* code blocks */
+pre {
+  font-family: monospace;
+}
+dl.code dt,
+dl.file dt {
+  font-weight: bold;
+}
+
+/* images */
+img {
+  vertical-align: middle;
+  border-width: 0;
+}
+img.media {
+  margin: .2em 0;
+}
+img.medialeft {
+  margin: .2em 1.5em .2em 0;
+}
+img.mediaright {
+  margin: .2em 0 .2em 1.5em;
+}
+img.mediacenter {
+  margin: .2em auto;
+}
+
+mark {
+  font-weight: bold;
+}
+
+blockquote {
+  padding: 0 10pt;
+  margin: 0;
+  border: solid #ccc;
+  border-width: 0 0 0 2pt;
+}
+[dir=rtl] blockquote {
+  border-width: 0 2pt 0 0;
+}
+
+/* tables */
+/*table {
+    border-collapse: collapse;
+    empty-cells: show;
+    border-spacing: 0;
+    border: 1pt solid #ccc;
+}
+th,
+td {
+    padding: 3pt 5pt;
+    margin: 0;
+    vertical-align: top;
+    border: 1pt solid #666;
+    text-align: left;
+}
+[dir=rtl] th,
+[dir=rtl] td {
+    text-align: right;
+}
+th {
+    font-weight: bold;
+}*/
+
+[class^=sectionedit] {
+	width: 65%;
+}
+
+.youarehere .breadcrumb {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 15px;
+  background: #fff;
+  border: none;
+}
+.youarehere .separator {
+  display: none;
+}
+.youarehere li {
+  display: none;
+  list-style: none;
+}
+.youarehere a:after {
+  display: none;
+  content: "";
+}
+.youarehere li:last-child {
+  display: inline;
+}
+.youarehere li:last-child a:after {
+  display: inline;
+  font-size: 90%;
+  content: " [" attr(href) "]";
+}
+
+/*____________ a bit of layout ____________*/
+
+#dokuwiki__top {
+  margin-top: 0 !important;
+}
+#dokuwiki__header {
+  border-bottom: 2pt solid #ccc;
+}
+#dokuwiki__header h1 {
+  font-size: 1.5em;
+}
+#dokuwiki__header h1 a {
+  text-decoration: none;
+}
+.dokuwiki div.footnotes {
+  margin-top: 10pt;
+  clear: both;
+  border-top: 1pt solid #000;
+}
+.container.not-header,
+.wrapper,
+#dokuwiki__content {
+  left: 0;
+  width: 100%;
+  margin: 0;
+}
+
+
+/*____________ @deprecated ____________*/
+/* unnecessary, has been in lib/styles/all|print.css since Rincewind */
+
+.a11y,
+div.notify,
+div.info,
+div.success,
+div.error,
+.dokuwiki .secedit {
+  display: none;
+}
+
+.visible-phone .skip-to-content {
+  display: none !important;
+}
+.visible-phone {
+  padding: 0;
+  margin: 0;
+}
+.visible-phone li {
+  padding: 0;
+  margin: 0;
+}
+.navbar .btn.btn-navbar {
+  display: none;
+  padding: 0;
+  margin: 0;
+  visibility: hidden;
+  border: none;
+}
+
+/* align table cells */
+.leftalign {
+  text-align: left;
+}
+.centeralign {
+  text-align: center;
+}
+.rightalign {
+  text-align: right;
+}
+
+/* underline */
+em.u {
+  font-style: normal;
+  text-decoration: underline;
+}
+em em.u {
+  font-style: italic;
+}
+
+div.clearer {
+  height: 0;
+  overflow: hidden;
+  clear: both;
+  line-height: 0;
+}
