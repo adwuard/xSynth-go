@@ -6,6 +6,10 @@ This project aims to create a portable hardware platform for interacting with th
 
 ## Hardware Build
 ![Hardware Image](images/XFM2-REVA-Baseboard-Snapshot.jpg)
+### System block diagram
+- `FPGA baseboard`: Left section of the system diagram. The design is completed and can work as standalone unit and be controlled over MIDI and UART interface.
+- `MCU board`: Right section of the system diagram. It is for screen/keyboard UI controls and USB MIDI device. Hardware design is still "work in progress".
+![System Diagram](images/XSynth-System%20Diagram.jpg)
 
 ## Key Features:
 - Compatibility with [XFM DIY Synthesizer](https://www.futur3soundz.com/xfm2/) by René Ceballos.
